@@ -2,8 +2,9 @@ import React, {useState, Component } from 'react'
 import './Dropdown.scss'
 function Dropdown(props){
     const handleChange = e =>{
-        props.setStateOfParent(e.target.value);
+        props.setStateOfParent(props.id,e.target.value);
     }
+    
     return (
         <div className='dropdown'>
             <label htmlFor={props.htmlFor}>{props.children}</label>
